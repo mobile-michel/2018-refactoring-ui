@@ -1,0 +1,52 @@
+/*---- Reset some default browser styles ----*/
+
+* {
+    box-sizing: border-box;
+}
+
+/*---- Basic typography ----*/
+
+body {
+    font-family: var(--font-family-serif);
+    line-height: var(--line-height-base);
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family-sans);
+    font-weight: bold;
+}
+
+h2 + p, h3 + h4, h3 + ul, h4 + ul {
+    margin-top: 0rem;
+}
+
+h2:has(+ p), h3:has(+ h4), h3:has(+ ul), h4:has(+ ul) {
+    margin-bottom: 0rem;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+header,
+footer {
+    text-align: center;
+}
+
+aside, main {
+    margin: .5rem;
+}
+
+blockquote {
+    margin: 0;
+    padding: 1rem;
+    background-color: var(--background-color-light);
+    border-left: 3px solid var(--text-color);
+}

@@ -1,0 +1,32 @@
+/*---- Grid layout ----*/
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+body>*>* {
+  max-width: 100ch;
+  margin: 0 auto;
+}
+
+main {
+  padding: var(--spacing-medium);
+}
+
+@media screen and (min-width: 800px) {
+  #main-content>div {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  aside {
+    flex: 0 0 22ch;
+  }
+
+  main {
+    flex: 1 1 75%;
+  }
+
+}

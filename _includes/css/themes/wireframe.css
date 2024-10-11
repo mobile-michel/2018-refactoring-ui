@@ -1,0 +1,13 @@
+/*---- Wireframe ----*/
+
+header, footer {
+    background-color: var(--neutral-300);
+}
+
+#main-content {
+    background-color: var(--neutral-100);
+}
+
+main {
+    background-color: var(--neutral-400);
+}

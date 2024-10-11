@@ -1,0 +1,29 @@
+---
+layout: layouts/base
+---
+<header>
+    <div>
+        <h1>Refactoring UI</h1>
+        {% render 'navigation/header' with collections.primary as primary, url: page.url %}
+    </div>
+</header>
+<div id="main-content">
+    <div>
+        <aside>
+            <h3>Chapters</h3>
+            {% render 'navigation/aside' with collections.chapters as secondary, url: page.url %}
+        </aside>
+        <main>
+            <h2>{{ title }}</h2>
+            <p>{{ description }}</p>
+            {% if bookPage %}<blockquote>This is <strong>page {{ bookPage }}</strong> of the book.</blockquote>{% endif %}
+            {{ content }}
+        </main>
+    </div>
+</div>
+<footer>
+    <div>
+        {% render 'navigation/footer' with collections.footer as footer %}
+        <p>&copy; 2024 - Michel Maillard</p>
+    </div>
+</footer>
